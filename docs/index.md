@@ -1,5 +1,3 @@
-# Danke Furs Lesen Note Bot (DfLNoteBot)
-
 A small discord bot whose purpose is to facilitate improvement on projects by allowing users to assign notes with metadata, that can then be filtered and viewed.
 
 ## Available Metadata
