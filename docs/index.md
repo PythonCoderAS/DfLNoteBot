@@ -19,14 +19,14 @@ A small discord bot whose purpose is to facilitate improvement on projects by al
 * [`/note`](#note) - Create a new note.
 * [`/view`](#view) - View a note.
 * [`/resolve`](#resolve) - Resolve a note.
-* `/edit` - Edit a note.
-* `/delete` - Delete a note.
+* [`/edit`](#edit) - Edit a note.
+* [`/delete`](#delete) - Delete a note.
 * [`/list`](#list) - List all notes.
-* `/metadata` - Set metadata for a note.
-* `/metadata default` - Set default metadata for new notes created in a channel.
-* `/metadata list` - List all possible metadata options.
+* [`/default`](#default) - Set default metadata for new notes created in a channel.
 
 ### /note
+
+Create a new note with the given message and any provided metadata.
 
 #### Arguments
 
@@ -35,3 +35,23 @@ A small discord bot whose purpose is to facilitate improvement on projects by al
 * `page:<page>` - Used to indicate the current page the note is for. _Optional._
 * `panel:<panel>` - Used to indicate the panel the note is for. _Optional._
 * `bubble:<bubble>` - Used to indicate the text bubble the note is for. _Optional._
+
+### /view
+
+View the contents of a note.
+
+#### Arguments
+
+* `note_id:<note_id>` - The numerical note ID. **Required.**
+
+### /resolve
+
+Resolve an unresolved note and unresolve a resolved note.
+
+#### Arguments
+
+* `note_id:<note_id>` - The numerical note ID. **Required.**
+
+### /list
+
+List all notes meeting the provided criteria.
