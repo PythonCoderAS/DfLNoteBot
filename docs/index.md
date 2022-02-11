@@ -26,7 +26,7 @@ A small discord bot whose purpose is to facilitate improvement on projects by al
 * `/metadata default` - Set default metadata for new notes created in a channel.
 * `/metadata list` - List all possible metadata options.
 
-### `/note`
+### /note
 
 #### Arguments
 
