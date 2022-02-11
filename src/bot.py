@@ -9,7 +9,7 @@ from tortoise import Tortoise
 from src.config import token
 from src.orm import init
 
-intents = Intents(guilds=True, guild_messages=True)
+intents = Intents(guilds=True, members=True)
 bot = Bot(command_prefix="/", intents=intents)
 defaults: Dict[int, Dict[str, str]] = defaultdict(dict)
 
