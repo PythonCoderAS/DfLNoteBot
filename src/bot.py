@@ -10,7 +10,7 @@ from src.config import token
 from src.orm import init
 
 intents = Intents(guilds=True, guild_messages=True)
-bot = Bot(command_prefix="/", intents=intents, debug_guilds=[919616827338924042])
+bot = Bot(command_prefix="/", intents=intents)
 defaults: Dict[int, Dict[str, str]] = defaultdict(dict)
 
 _original_bot_close = bot.close
