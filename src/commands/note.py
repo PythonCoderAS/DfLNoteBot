@@ -16,12 +16,13 @@ class NoteCog(Cog):
                    chapter: Option(str, "The chapter for the note.", required=False) = None,
                    page: Option(str, "The page for the note.", required=False) = None,
                    panel: Option(str, "The panel for the note.", required=False) = None,
-                   bubble: Option(str, "The bubble for the note.", required=False) = None, ):
+                   bubble: Option(str, "The bubble for the note.", required=False) = None,
+                   image_url: Option(str, "The image URL for the note.", required=False) = None):
         complete_metadata = defaultdict(lambda: None, **defaults[ctx.channel.id],
                                         **get_metadata(chapter, page, panel, bubble))
         note = Note(channel_id=ctx.channel.id, text=message, chapter=complete_metadata["Chapter"],
                     page=complete_metadata["Page"], panel=complete_metadata["Panel"],
-                    bubble=complete_metadata["Bubble"])
+                    bubble=complete_metadata["Bubble"], image_url=image_url)
         await note.save()
         return await ctx.respond(f"Note {note.id} created.", embeds=[note_representation(note)])
 
@@ -52,7 +53,7 @@ class NoteCog(Cog):
                    panel: Option(str, "The panel that listed notes should have.", required=False) = None,
                    bubble: Option(str, "The bubble that listed notes should have.", required=False) = None,
                    resolved: Option(str, "Whether to list (un)resolved notes only or both.", required=False,
-                                    choices=["resolved", "unresolved", "both"]) = "both"):
+                                    choices=["resolved", "unresolved", "both"]) = "unresolved"):
         base = Note.all()
         if scope != "channel":
             if not ctx.guild_id:

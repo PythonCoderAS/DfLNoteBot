@@ -23,6 +23,7 @@ class Note(Model):
     id = IntField(pk=True)
     channel_id = BigIntField(null=False)
     text = CharField(max_length=4096, null=False)
+    image_url = CharField(max_length=256, null=True, default=None)
     resolved = BooleanField(null=False, default=False)
 
     chapter = CharField(max_length=256, null=True, default=None)

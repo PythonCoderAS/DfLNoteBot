@@ -38,4 +38,6 @@ def note_representation(note: Note) -> Embed:
         embed.add_field(name="Panel", value=note.panel)
     if note.bubble:
         embed.add_field(name="Bubble", value=note.bubble)
+    if note.image_url:
+        embed.set_image(url=note.image_url)
     return embed
