@@ -470,11 +470,11 @@
                 "speed"
             ],
             "hashes": [
-                "sha256:08df16fce33f0acf0295580971e84c1d12e7586b70c72ec44edb9ccd4cb85f38",
-                "sha256:1b8fc69e1f8957dbd98851d9b648cdebcf0c44c1f9891caf85ec372477efd8d7"
+                "sha256:66ab1fc91f6cd00318cf230677c5d4860fe6532a06cb424f06e22132a912f975",
+                "sha256:ec3484440d9cde21bd4ae605a69004f932e878b9bed0ec2e1286191a4d3b6c0d"
             ],
             "index": "pypi",
-            "version": "==2.0.0b3"
+            "version": "==2.0.0rc1"
         },
         "pycares": {
             "hashes": [
